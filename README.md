@@ -21,3 +21,7 @@ This is an implementation of another famous Apple scroll animation that you can 
 - [Framer Motion](https://www.framer.com/motion/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [React Icons](https://react-icons.github.io/react-icons/)
+
+## License
+
+- [MIT](LICENSE.md)
