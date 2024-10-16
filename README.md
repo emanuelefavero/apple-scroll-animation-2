@@ -4,7 +4,7 @@ This is an implementation of another famous Apple scroll animation that you can 
 
 > Note: This project was originally created by [Tom is Loading](https://github.com/emanuelefavero/apple-scroll-animation) and I've made some changes to it
 >
-> Check out another [Apple Scroll Animation 1](https://github.com/emanuelefavero/apple-scroll-animation)
+> Check out [Apple Scroll Animation 1](https://github.com/emanuelefavero/apple-scroll-animation)
 
 ## Installation
 
