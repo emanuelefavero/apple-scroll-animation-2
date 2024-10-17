@@ -1,46 +1,24 @@
 'use client'
 
+// @see @/DOCUMENTATION.md for more information
+
 import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 
-export default function Component() {
-  return (
-    <>
-      <AppleScrollAnimation
-        imgUrl='https://images.unsplash.com/photo-1620121478247-ec786b9be2fa?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-        subheading='Subheading 1'
-        heading='Heading 1'
-      />
-      <AppleScrollAnimation
-        imgUrl='https://images.unsplash.com/photo-1620120966883-d977b57a96ec?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-        subheading='Subheading 2'
-        heading='Heading 2'
-      />
-      <AppleScrollAnimation
-        imgUrl='https://images.unsplash.com/photo-1690046793092-f8d634523264?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-        subheading='Subheading 3'
-        heading='Heading 3'
-      />
+const IMG_PADDING = 0 // * set the padding for the image here
 
-      {/* TIP: You can also add content between the scroll animations but make sure to remove the scale (bigger) animation in the StickyImage component to prevent visual issues */}
-    </>
-  )
-}
-
-// * Set padding for the image
-const IMG_PADDING = 0
-
-// -< AppleScrollAnimation >-----------------------------------
-// @see @/DOCUMENTATION.md for more information
-function AppleScrollAnimation({
-  imgUrl,
-  subheading,
-  heading,
-}: {
+interface Props {
   imgUrl: string
   subheading: string
   heading: string
-}) {
+}
+
+// -< AppleScrollAnimation >-----------------------------------
+export default function AppleScrollAnimation({
+  imgUrl,
+  subheading,
+  heading,
+}: Props) {
   return (
     <div
       style={{
@@ -62,7 +40,7 @@ function StickyImage({ imgUrl }: { imgUrl: string }) {
   const targetRef = useRef(null)
   const { scrollYProgress } = useScroll({
     target: targetRef,
-    offset: ['end end', 'end start'], // * Adjust the offset as needed
+    offset: ['end end', 'end start'], // * adjust the offset as needed
   })
 
   // * Add more animations here and adjust the range as needed
