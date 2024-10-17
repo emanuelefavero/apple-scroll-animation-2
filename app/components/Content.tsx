@@ -44,6 +44,7 @@ const TextParallaxContent = ({
         paddingRight: IMG_PADDING,
       }}
     >
+      {/* // * Choose a height that is at least 100vh and adjust as needed */}
       <div className='relative h-[150vh]'>
         <StickyImage imgUrl={imgUrl} />
         <OverlayCopy heading={heading} subheading={subheading} />
@@ -59,8 +60,9 @@ const StickyImage = ({ imgUrl }: { imgUrl: string }) => {
     offset: ['end end', 'end start'],
   })
 
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.85])
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0])
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 2])
+  const rotate = useTransform(scrollYProgress, [0, 1], [0, 15])
 
   return (
     <motion.div
@@ -71,16 +73,19 @@ const StickyImage = ({ imgUrl }: { imgUrl: string }) => {
         height: `calc(100vh - ${IMG_PADDING * 2}px)`,
         top: IMG_PADDING,
         scale,
+        opacity,
+        rotate,
       }}
       ref={targetRef}
       className='sticky z-0 overflow-hidden'
     >
-      <motion.div
+      {/* TIP: Uncomment this to also add opacity over the image */}
+      {/* <motion.div
         className='absolute inset-0 bg-neutral-950/70'
         style={{
           opacity,
         }}
-      />
+      /> */}
     </motion.div>
   )
 }
