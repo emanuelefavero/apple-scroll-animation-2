@@ -6,17 +6,17 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 export default function Component() {
   return (
     <>
-      <TextParallaxContent
+      <AppleScrollAnimation
         imgUrl='https://images.unsplash.com/photo-1620121478247-ec786b9be2fa?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
         subheading='Subheading 1'
         heading='Heading 1'
       />
-      <TextParallaxContent
+      <AppleScrollAnimation
         imgUrl='https://images.unsplash.com/photo-1620120966883-d977b57a96ec?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
         subheading='Subheading 2'
         heading='Heading 2'
       />
-      <TextParallaxContent
+      <AppleScrollAnimation
         imgUrl='https://images.unsplash.com/photo-1690046793092-f8d634523264?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
         subheading='Subheading 3'
         heading='Heading 3'
@@ -28,7 +28,7 @@ export default function Component() {
 // * Set padding for the image
 const IMG_PADDING = 0
 
-const TextParallaxContent = ({
+const AppleScrollAnimation = ({
   imgUrl,
   subheading,
   heading,
@@ -45,9 +45,9 @@ const TextParallaxContent = ({
       }}
     >
       {/* // * Choose a height that is at least 100vh and adjust as needed */}
-      <div className='relative h-[150vh]'>
+      <div className='relative h-[150vh] rounded-2xl'>
         <StickyImage imgUrl={imgUrl} />
-        <OverlayCopy heading={heading} subheading={subheading} />
+        <OverlayContent heading={heading} subheading={subheading} />
       </div>
     </div>
   )
@@ -82,7 +82,7 @@ const StickyImage = ({ imgUrl }: { imgUrl: string }) => {
     >
       {/* TIP: Uncomment this to also add opacity over the image */}
       {/* <motion.div
-        className='absolute inset-0 bg-neutral-950/70'
+        className='absolute inset-0  bg-neutral-950/70'
         style={{
           opacity,
         }}
@@ -91,7 +91,7 @@ const StickyImage = ({ imgUrl }: { imgUrl: string }) => {
   )
 }
 
-const OverlayCopy = ({
+const OverlayContent = ({
   subheading,
   heading,
 }: {
