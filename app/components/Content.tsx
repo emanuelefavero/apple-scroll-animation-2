@@ -28,7 +28,8 @@ export default function Component() {
 // * Set padding for the image
 const IMG_PADDING = 0
 
-const AppleScrollAnimation = ({
+// -< AppleScrollAnimation >-----------------------------------
+function AppleScrollAnimation({
   imgUrl,
   subheading,
   heading,
@@ -36,7 +37,7 @@ const AppleScrollAnimation = ({
   imgUrl: string
   subheading: string
   heading: string
-}) => {
+}) {
   return (
     <div
       style={{
@@ -53,7 +54,8 @@ const AppleScrollAnimation = ({
   )
 }
 
-const StickyImage = ({ imgUrl }: { imgUrl: string }) => {
+// -< StickyImage >-----------------------------------
+function StickyImage({ imgUrl }: { imgUrl: string }) {
   const targetRef = useRef(null)
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -91,13 +93,14 @@ const StickyImage = ({ imgUrl }: { imgUrl: string }) => {
   )
 }
 
-const OverlayContent = ({
+// -< OverlayContent >-----------------------------------
+function OverlayContent({
   subheading,
   heading,
 }: {
   subheading: string
   heading: string
-}) => {
+}) {
   const targetRef = useRef(null)
   const { scrollYProgress } = useScroll({
     target: targetRef,
