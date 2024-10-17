@@ -48,7 +48,7 @@ function AppleScrollAnimation({
       }}
     >
       {/* // * Choose a height that is at least 100vh and adjust as needed */}
-      <div className='relative h-[150vh] rounded-2xl'>
+      <div className='relative h-[150vh]'>
         <StickyImage imgUrl={imgUrl} />
         <OverlayContent heading={heading} subheading={subheading} />
       </div>
@@ -82,6 +82,7 @@ function StickyImage({ imgUrl }: { imgUrl: string }) {
         rotate,
       }}
       ref={targetRef}
+      // TIP: Add rounded-3xl here to make the image rounded, also don't forget to adjust the IMG_PADDING up there ↑
       className='sticky z-0 overflow-hidden'
     >
       {/* TIP: Uncomment this to also add opacity over the image */}

@@ -1,9 +1,5 @@
-import Content from '@/app/components/Content'
+import ClientComponent from '@/app/components/ClientComponent'
 
 export default function Home() {
-  return (
-    <>
-      <Content />
-    </>
-  )
+  return <ClientComponent />
 }
