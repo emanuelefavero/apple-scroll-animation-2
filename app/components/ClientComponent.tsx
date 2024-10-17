@@ -31,6 +31,7 @@ export default function Component() {
 const IMG_PADDING = 0
 
 // -< AppleScrollAnimation >-----------------------------------
+// @see @/DOCUMENTATION.md for more information
 function AppleScrollAnimation({
   imgUrl,
   subheading,

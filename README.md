@@ -12,7 +12,10 @@ This is an implementation of another famous Apple scroll animation that you can 
 2. Run `npm install`
 3. Run `npm run dev`
 4. Visit `http://localhost:3000`
-5. Enjoy!
+
+## Documentation
+
+- [AppleScrollAnimation Component Documentation](DOCUMENTATION.md)
 
 ## Resources
 
