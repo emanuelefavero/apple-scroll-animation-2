@@ -57,9 +57,10 @@ const StickyImage = ({ imgUrl }: { imgUrl: string }) => {
   const targetRef = useRef(null)
   const { scrollYProgress } = useScroll({
     target: targetRef,
-    offset: ['end end', 'end start'],
+    offset: ['end end', 'end start'], // * Adjust the offset as needed
   })
 
+  // * Add more animations here and adjust the range as needed
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0])
   const scale = useTransform(scrollYProgress, [0, 1], [1, 2])
   const rotate = useTransform(scrollYProgress, [0, 1], [0, 15])
