@@ -20,7 +20,6 @@ This is an implementation of another famous Apple scroll animation that you can 
 - [Next.js](https://nextjs.org/)
 - [Framer Motion](https://www.framer.com/motion/)
 - [Tailwind CSS](https://tailwindcss.com/)
-- [React Icons](https://react-icons.github.io/react-icons/)
 
 ## License
 
