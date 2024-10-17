@@ -25,7 +25,8 @@ export default function Component() {
   )
 }
 
-const IMG_PADDING = 12
+// * Set padding for the image
+const IMG_PADDING = 0
 
 const TextParallaxContent = ({
   imgUrl,
@@ -72,7 +73,7 @@ const StickyImage = ({ imgUrl }: { imgUrl: string }) => {
         scale,
       }}
       ref={targetRef}
-      className='sticky z-0 overflow-hidden rounded-3xl'
+      className='sticky z-0 overflow-hidden'
     >
       <motion.div
         className='absolute inset-0 bg-neutral-950/70'
