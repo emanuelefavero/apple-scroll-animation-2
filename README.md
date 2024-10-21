@@ -2,11 +2,13 @@
 
 This is an implementation of another famous Apple scroll animation that you can often find on their website, this time built with React and Framer Motion.
 
-> Note: This project was originally created by [Tom is Loading](https://github.com/emanuelefavero/apple-scroll-animation) and I've made some changes to it
->
-> Check out [Apple Scroll Animation 1](https://github.com/emanuelefavero/apple-scroll-animation)
+> Check out also [Apple Scroll Animation 1](https://github.com/emanuelefavero/apple-scroll-animation)
 
-#### GIF example
+### Live Demo
+
+- [https://apple-scroll-animation-2.vercel.app](https://apple-scroll-animation-2.vercel.app/)
+
+#### GIF Preview
 
 <img src="apple-scroll-animation-2.gif" alt="screenshot" width="300">
 
