@@ -6,6 +6,10 @@ This is an implementation of another famous Apple scroll animation that you can 
 >
 > Check out [Apple Scroll Animation 1](https://github.com/emanuelefavero/apple-scroll-animation)
 
+#### GIF example
+
+<img src="apple-scroll-animation-2.gif" alt="screenshot" width="300">
+
 ## Installation
 
 1. Clone the repository
